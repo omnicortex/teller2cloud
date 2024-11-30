@@ -8,8 +8,7 @@
             "type": "f5anything",
             "request": "launch",
             "name": "F5 Anything",
-//            "preLaunchTask": "vagrantup",
-            "command": "sudo docker compose up --build --remove-orphans",
+            "command": "bash teller2cloud.sh",
             "showTerminal": true
         }
     ]
