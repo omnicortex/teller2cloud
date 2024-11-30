@@ -12,7 +12,5 @@ podman run --rm \
     -v ${PWD}/settings.yaml:/teller/settings.yaml \
     -v ${PWD}/teller_zip:/teller/teller \
     -v ${PWD}/.env:/teller/.env \
-#    -v ${PWD}/upload.py:/teller/upload.py \
-#    -v ${PWD}/run.sh:/teller/run.sh \
     -v ${PWD}/export:/teller/export \
     ghcr.io/omnicortex/teller2cloud:latest

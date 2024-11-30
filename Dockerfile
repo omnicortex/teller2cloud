@@ -11,5 +11,5 @@ COPY upload.py .
 COPY fetch.py .
 COPY run.sh .
 
-ENTRYPOINT ["/bin/bash", "run.sh"]
+ENTRYPOINT ["/teller/run.sh"]
 
