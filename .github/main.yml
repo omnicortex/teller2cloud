@@ -1,0 +1,32 @@
+name: Build fetch and upload
+on:
+  push:
+    paths:
+      - Dockerfile
+      - main.yml
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        submodules: true
+
+    - name: Login to Github Container Registry
+      uses: docker/login-action@v2
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+      
+    - name: Build
+      uses: docker/build-push-action@v3
+      with:
+        context: .
+        push: true
+        target: teller2cloud
+        tags: |
+          ghcr.io/${{ github.repository_owner }}/teller2cloud:latest
