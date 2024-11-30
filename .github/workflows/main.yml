@@ -1,5 +1,6 @@
 name: Build fetch and upload
 on:
+  workflow_dispatch:
   push:
     paths:
       - Dockerfile
