@@ -28,6 +28,5 @@ jobs:
       with:
         context: .
         push: true
-        target: teller2cloud
         tags: |
           ghcr.io/${{ github.repository_owner }}/teller2cloud:latest
