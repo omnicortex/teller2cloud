@@ -1,0 +1,14 @@
+
+services:
+  teller-cloud:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: bash run.sh
+    volumes:
+      - ./client_secrets.json:/teller/client_secrets.json
+      - ./credentials.json:/teller/credentials.json
+      - ./settings.yaml:/teller/settings.yaml
+      - ./teller_zip:/teller/teller
+      - ./.env:/teller/.env
+      - ./tokens.csv:/teller/tokens.csv
