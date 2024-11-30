@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - Dockerfile
-      - main.yml
+      - .github/workflows/main.yml
 
 jobs:
   build:
