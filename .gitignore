@@ -3,3 +3,5 @@ data
 export
 *.csv
 teller_zip
+client_secrets.json
+credentials.json
