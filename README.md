@@ -19,7 +19,9 @@ You will need the following files in your working directory.
 Now run `teller2cloud.sh`
 
 ### GitHub Actions
-You first need to fork this project. Then create the following repository secrets for your workflow and place the content of the corresponding file from above in it.
+You first need to fork this project. 
+Go to your repo's **Actions** > Click **I understand my workflows, go ahead and enable them**
+Then create the following repository secrets for your workflow and place the content of the corresponding file from above in it. Go to your repo's **Settings > Secrets** and add a **New Secret**.
 
 - `ENV`: The `.env` file
 - `TOKENS`: The `tokens.csv` file
@@ -27,3 +29,5 @@ You first need to fork this project. Then create the following repository secret
 - `GDRIVE_CREDENTIALS`: The `credentials.json` file
 - `TELLER_CERTIFICATE`: The `certificate.pem` file in your `teller_zip` folder
 - `TELLER_PRIVATE_KEY`: The `private_key.pem` file in your `teller_zip` folder
+
+In the **Actions** tab of your repo, the **Fetch** workflow will now update your transactions periodically. The default refresh interval is once a month – you can use [Crontab Guru](https://crontab.guru/) to define your own interval.
