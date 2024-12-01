@@ -1,4 +1,4 @@
-name: Build fetch and upload
+name: Build docker image
 on:
   workflow_dispatch:
   push:

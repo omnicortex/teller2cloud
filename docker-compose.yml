@@ -1,9 +1,7 @@
 
 services:
   teller-cloud:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: ghcr.io/omnicortex/teller2cloud:latest
     command: bash run.sh
     volumes:
       - ./client_secrets.json:/teller/client_secrets.json
