@@ -16,4 +16,14 @@ You will need the following files in your working directory.
 - Download the `teller.zip` file from teller.io and extract it to `teller_zip`
 - Create a folder named `export` if not yet exist.
 
+Now run `teller2cloud.sh`
+
 ### GitHub Actions
+You first need to fork this project. Then create the following repository secrets for your workflow and place the content of the corresponding file from above in it.
+
+- `ENV`: The `.env` file
+- `TOKENS`: The `tokens.csv` file
+- `GDRIVE_CLIENT_SECRETS`: The `client_secrets.json` file
+- `GDRIVE_CREDENTIALS`: The `credentials.json` file
+- `TELLER_CERTIFICATE`: The `certificate.pem` file in your `teller_zip` folder
+- `TELLER_PRIVATE_KEY`: The `private_key.pem` file in your `teller_zip` folder
